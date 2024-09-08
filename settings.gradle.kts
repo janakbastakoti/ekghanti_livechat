@@ -22,4 +22,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "chat_example"
 include(":app")
-//include(":ekghanti_livechat_sdk")
+include(":ekghanti_livechat_sdk")
