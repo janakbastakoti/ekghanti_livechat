@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.ekghanti_livechat_sdk.LiveChat
 import com.example.ekghanti_livechat_sdk.WebviewLivechat
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, WebviewLivechat::class.java)
             startActivity(intent)
 
+
+        }
+
+        val btn2: Button = findViewById(R.id.livechatBtn)
+        btn2.setOnClickListener {
+
+            val intent = Intent(this, LiveChat::class.java)
+            startActivity(intent)
 
         }
 

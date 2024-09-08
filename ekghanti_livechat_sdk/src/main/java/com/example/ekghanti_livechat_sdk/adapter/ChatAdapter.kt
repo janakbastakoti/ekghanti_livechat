@@ -1,5 +1,5 @@
-package com.example.ekchanti_chat_sdk.adapter
-
+package com.example.ekghanti_livechat_sdk.adapter
+//
 import android.app.Activity
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,16 +9,19 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
+
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ekchanti_chat_sdk.R
-import com.example.ekchanti_chat_sdk.helper.Helper
-import com.example.ekchanti_chat_sdk.model.chat.Message
-import com.google.android.material.button.MaterialButtonToggleGroup.OnButtonCheckedListener
-import java.util.concurrent.TimeUnit
+import com.example.ekghanti_livechat_sdk.R
+
+import com.example.ekghanti_livechat_sdk.helper.Helper
+import com.example.ekghanti_livechat_sdk.model.chat.Message
 import com.squareup.picasso.Picasso
 
-class ChatAdapter(val context: Activity, val dataList: List<Message>, private val onButtonClick: (String) -> Unit) :
+class ChatAdapter(
+    val context: Activity,
+    val dataList: List<Message>,
+    private val onButtonClick: (String) -> Unit
+) :
     RecyclerView.Adapter<ChatAdapter.MyViewHolder>() {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //other message
@@ -81,24 +84,9 @@ class ChatAdapter(val context: Activity, val dataList: List<Message>, private va
         Log.e("currentData:::777", currentData.toString())
 
         holder.msgBtn.setOnClickListener {
-
-            //context.onButtonClick("oneone")
-            //Log.e("button click", currentData.toString())
             onButtonClick(currentData?.chatMessage?.message.toString())
-            //Toast.makeText(this, "Button clicked for message:", Toast.LENGTH_SHORT).show()
-            //ButtonClickListener.onButtonClick("this is test")
-
-
-
         }
 
-        //init {
-        //    //button.setOnClickListener {
-        //    //    val message = messages[adapterPosition]
-        //    //    buttonClickListener.onButtonClick(message.id)
-        //    //}
-        //}
-        //
         if (currentData?.chatMessage?.displayType == "text") {
             holder.buttonArea.visibility = View.GONE
             if (currentData?.chatMessage?.chatSide == "outgoing") {
@@ -148,7 +136,6 @@ class ChatAdapter(val context: Activity, val dataList: List<Message>, private va
                 holder.myImgMsg.visibility = View.VISIBLE
 
                 Picasso.get().load(currentData?.chatMessage?.message).into(holder.myImgMsg)
-
 
                 holder.myTimestamp.text = timeAgo
             }

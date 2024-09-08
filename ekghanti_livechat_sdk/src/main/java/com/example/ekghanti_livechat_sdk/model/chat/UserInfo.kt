@@ -1,4 +1,4 @@
-package com.example.ekchanti_chat_sdk.model.chat
+package com.example.ekghanti_livechat_sdk.model.chat
 
 data class UserInfo(
     val ipAddress: String,
