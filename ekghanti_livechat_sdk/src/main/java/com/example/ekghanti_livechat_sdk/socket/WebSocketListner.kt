@@ -1,11 +1,8 @@
-package com.example.ekchanti_chat_sdk.socket
+package com.example.ekghanti_livechat_sdk.socket
 
 import android.util.Log
-import android.view.View
-import android.widget.ScrollView
-import com.example.ekchanti_chat_sdk.R
-import com.example.ekchanti_chat_sdk.helper.Helper
-import com.example.ekchanti_chat_sdk.model.chat.Message
+import com.example.ekghanti_livechat_sdk.helper.Helper
+import com.example.ekghanti_livechat_sdk.model.chat.Message
 import com.google.gson.Gson
 import okhttp3.Response
 import okhttp3.WebSocket

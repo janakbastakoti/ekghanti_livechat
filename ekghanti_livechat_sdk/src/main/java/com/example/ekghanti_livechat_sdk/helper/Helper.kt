@@ -1,4 +1,4 @@
-package com.example.ekchanti_chat_sdk.helper
+package com.example.ekghanti_livechat_sdk.helper
 
 import android.util.Log
 import org.json.JSONObject
