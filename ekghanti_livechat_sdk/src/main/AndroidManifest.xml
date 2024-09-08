@@ -3,6 +3,9 @@
 
     <application>
         <activity
+            android:name=".LiveChat"
+            android:exported="false" />
+        <activity
             android:name=".WebviewLivechat"
             android:exported="false" />
     </application>
