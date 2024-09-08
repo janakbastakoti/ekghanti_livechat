@@ -1,20 +1,17 @@
 plugins {
-    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
 
 android {
-    namespace = "com.example.chat_example"
+    namespace = "com.example.ekghanti_livechat_sdk"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.chat_example"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -46,6 +43,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(project(":ekghanti_livechat_sdk"))
-
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.picasso:picasso:2.8")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    implementation ("com.squareup.retrofit2:converter-scalars:2.11.0")
 }

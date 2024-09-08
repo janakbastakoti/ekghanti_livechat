@@ -1,10 +1,13 @@
 package com.example.chat_example
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.ekghanti_livechat_sdk.WebviewLivechat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +19,18 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val btn1: Button = findViewById(R.id.webviewBtn)
+        btn1.setOnClickListener {
+
+            val intent = Intent(this, WebviewLivechat::class.java)
+            startActivity(intent)
+
+
+        }
+
+
+
+
     }
 }
