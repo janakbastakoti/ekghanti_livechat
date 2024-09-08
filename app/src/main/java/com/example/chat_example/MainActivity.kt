@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LiveChat::class.java)
             startActivity(intent)
 
-
         }
 
 
