@@ -46,6 +46,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(project(":ekghanti_livechat_sdk"))
-
+//    implementation(project(":ekghanti_livechat_sdk"))
+    implementation("com.github.janakbastakoti:ekghanti_livechat:0.0.1")
 }
